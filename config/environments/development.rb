@@ -26,6 +26,20 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # mailer activation
+
+  config.action_mailer.default_url_options =
+  { :host => 'localhost3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'heroku.com',
+  user_name:            'your_email@gmail.com',
+  password:             'your password',
+  authentication:       'login',
+  enable_starttls_auto: true
+  }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
