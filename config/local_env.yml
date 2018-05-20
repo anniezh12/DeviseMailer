@@ -1,0 +1,2 @@
+ENV['GMAIL_USERID']='aniqaelahi1@gmail.com'
+ENV['GMAIL_PASSWORD']='Saadkhan21'
